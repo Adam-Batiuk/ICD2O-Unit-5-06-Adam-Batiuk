@@ -6,8 +6,16 @@
 
 
 function myButtonClicked() {
-  while (i < 10) {
-    text += "The number is " + i;
-    i++;
+  // define numbers
+  const firstNumber = parseFloat(document.getElementById("first-number").value)
+  const secondNumber = parseFloat(document.getElementById("second-number").value)
+  let answer = secondNumber
+  // multiply
+  let numberOfLoops = 0
+  while (numberOfLoops <= firstNumber) {
+    answer = answer + secondNumber
+    numberOfLoops++;
   }
+  // print answer
+  document.getElementById("answer").innerHTML = "The answer is: " + answer
 }
